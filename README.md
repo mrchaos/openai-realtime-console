@@ -28,17 +28,20 @@ It should be available via `localhost:3000`.
 
 # Table of contents
 
-1. [Using the console](#using-the-console)
-   1. [Using a relay server](#using-a-relay-server)
-1. [Realtime API reference client](#realtime-api-reference-client)
-   1. [Sending streaming audio](#sending-streaming-audio)
-   1. [Adding and using tools](#adding-and-using-tools)
-   1. [Interrupting the model](#interrupting-the-model)
-   1. [Reference client events](#reference-client-events)
-1. [Wavtools](#wavtools)
-   1. [WavRecorder quickstart](#wavrecorder-quickstart)
-   1. [WavStreamPlayer quickstart](#wavstreamplayer-quickstart)
-1. [Acknowledgements and contact](#acknowledgements-and-contact)
+- [OpenAI Realtime Console](#openai-realtime-console)
+- [Starting the console](#starting-the-console)
+- [Table of contents](#table-of-contents)
+- [Using the console](#using-the-console)
+  - [Using a relay server](#using-a-relay-server)
+- [Realtime API reference client](#realtime-api-reference-client)
+  - [Sending streaming audio](#sending-streaming-audio)
+  - [Adding and using tools](#adding-and-using-tools)
+  - [Interrupting the model](#interrupting-the-model)
+  - [Reference client events](#reference-client-events)
+- [Wavtools](#wavtools)
+  - [WavRecorder Quickstart](#wavrecorder-quickstart)
+  - [WavStreamPlayer Quickstart](#wavstreamplayer-quickstart)
+- [Acknowledgements and contact](#acknowledgements-and-contact)
 
 # Using the console
 
@@ -124,7 +127,8 @@ const client = new RealtimeClient({ apiKey: process.env.OPENAI_API_KEY });
 
 // Can set parameters ahead of connecting
 client.updateSession({ instructions: 'You are a great, upbeat friend.' });
-client.updateSession({ voice: 'alloy' });
+// client.updateSession({ voice: 'alloy' });
+client.updateSession({ voice: 'Shimmer' }); // Coral, Sage
 client.updateSession({ turn_detection: 'server_vad' });
 client.updateSession({ input_audio_transcription: { model: 'whisper-1' } });
 
